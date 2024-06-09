@@ -1,0 +1,540 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: "Poppins", sans-serif;
+    --color1: #FFF ;
+    --color2: #181818 ;
+}
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    position: relative;
+    background-color:#E0E0E0;
+    padding: 30px 20px;
+    border:3px solid white;
+    border-radius:10px;
+}
+.logo img {width: 40px;}
+.menu {display: flex;}
+.menu li {padding-left: 30px;}
+.menu li a {
+    display: inline-block;
+    text-decoration: none;
+    color:crimson;
+    font-size:25px;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    position: relative;
+    text-transform: uppercase;
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color:crimson;
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu , .close-menu {
+    position: absolute;
+    color:crimson ;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {display: none;}
+@media(max-width: 610px){
+ .nav-bar{
+   padding:20px;
+ }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color:#E0E0E0;
+        transition: all 0.2s ease-in-out;
+    }
+    .menu li {margin-top: 40px;}
+    .menu li a {padding: 10px;}
+    .open-menu , .close-menu {display: block;}
+    #check:checked ~ .menu {right: 0;}
+}
+
+
+
+
+
+/*  slider css.*/
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+
+
+
+.link{
+  width:100%;
+  height:50px;
+  background-color:white;
+}
+.link img:active{
+  padding:10px;
+}
+
+
+  
+  /* Registration from */
+  
+ .Registration {
+   position: absolute;
+   position: static;
+   width: 100%;
+   height:500px;
+   background-image: url(photo-bg1.jpg);
+   background-size: cover;
+ }
+.Registration h3{
+  text-align: center;
+  color:whitesmoke;
+  text-shadow: black;
+  font-size:30px;
+  margin-top: 40px;
+}
+.Registration button{
+  width:300px;
+  height:60px;
+  margin-left:40px;
+  margin-top: 30px;
+  border-radius:45px;
+  background:crimson;
+  color: white;
+  font-size: 30px;
+}
+.Registration button:active{
+  background-color:white;
+  color:black;
+}
+.Registration img{
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin-left: 80px;
+  margin-top: 20px;
+  border-radius:20px;
+}
+@media (min-width:600px){
+ .Registration h3{
+   text-align: left;
+   margin-left:40px; 
+   margin-top: -270px;
+   font-size: 40px;
+ }
+.Registration button{
+  margin-top: 30px;
+  margin-left: 100px;
+}
+.Registration img{
+  width:300px;
+  height: 300px;
+  Margin-left:600px;
+  margin-top: 100px;
+}
+}
+@media (min-width:1000px){
+  .Registration h3{
+    text-align:left;
+    margin-left:250px;
+  }
+ .Registration button{
+   margin-left: 270px;
+ }
+ .Registration img{
+  margin-left: 700px;
+ }
+}
+
+
+
+
+
+
+
+.box{
+  width: 100%;
+  height:auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #E0E0E0;
+}
+.items{
+  width:200px;
+  height: 200px;
+  background:#E0E0E0;
+  color:white;
+  border-radius: 20px;
+  margin:10px;
+}
+.items img{
+  width:200px;
+  height:200px;
+}
+
+@media(max-width:600px){
+  .items{
+width:70px;
+height:70px;
+  }
+  .items img{
+    width:70px;
+    height:70px;
+  }
+}
+
+
+
+.product-div{
+  width:100%;
+  height:500px;
+  background-color:white;
+  display: flex;
+  gap:10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.product-div div{
+  width:200px;
+  height: 200px;
+  background-color:red;
+}
+.product-div img{
+  width:200px;
+  height:200px;
+}
+button{
+  width:200px;
+  height:50px;
+  background-color:crimson;
+  border-radius:40px;
+  font-size:20px;
+  color:white;
+}
+button:active{
+  background-color:white;
+  color: black;
+}
+@media (max-width:600px){
+  .product-div div{
+    width:100px;
+    height:100px;
+    }
+    .product-div img{
+      width:100px;
+      height:100px;
+    }
+  }
+
+
+
+/* video div */
+
+
+
+
+
+.container{
+  width: 100%;
+  height: 700px;
+  overflow: hidden;
+  overflow-y: scroll;
+    background-image:url(IMG3.jpg);
+    padding:15px 9%;
+    padding-bottom: 100px;
+}
+
+.container .heading{
+    text-align: center;
+    padding-bottom: 15px;
+    color:#fff;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    font-size: 50px;
+}
+.box p{
+  font-size: 30px;
+}
+
+.container .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap:15px;
+}
+
+.container .box-container .box{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+    border-radius: 5px;
+    background: #fff;
+    text-align: center;
+    padding:30px 20px;
+}
+
+
+
+.container .box-container .box .btn:hover{
+    letter-spacing: 1px;
+}
+
+.container .box-container .box:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0,.3);
+    transform: scale(1.03);
+}
+
+@media (max-width:768px){
+    .container{
+        padding:20px;
+    }
+}
+
+
+  
+ /* মুখের shap অনুযায়ী হেয়ারস্টাইল */
+.shap{
+  width: 100%;
+  height:700px;
+  background-color:white;
+  overflow:hidden;
+  overflow-Y: scroll;
+}
+ .shap h1{
+   text-align: center;
+   font-size:30px;
+   margin-top: 10px;
+ }
+ 
+
+
+
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid black;
+}
+
+.tab {
+  cursor: pointer;
+  padding: 10px;
+}
+
+.tab.active {
+  background-color: #CCC;
+}
+
+.tab:hover {
+  background-color: #AAA;
+}
+
+.tab-content {
+  margin-left: 20px;
+  margin-right: 20px;
+  background-image: url(imagebg.jpg);
+}
+.img{
+  width: 320px;
+  height:520px;
+}
+
+
+
+/* footer */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+img{
+    max-width: 100%;
+}
+.container{
+    background-color: #E0E0E0;
+    color: #4b4c4d;
+    margin: 0;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em 2em;
+    
+}
+.icons-link a{
+    color: inherit;
+    margin-right: 1em;
+    border: 1px solid #ccc;
+    font-size: 1.2rem;
+    opacity: .75;
+    display: inline-block;
+    padding: .3em;
+    border-radius: 100vw;
+}
+.icons-link a:hover{
+    background-color: #ededed;
+}
+.icons-link,
+ul{
+    margin-bottom: 1em;
+}
+ul a{
+    color: inherit;
+    margin: .5em;
+    font-size: .8rem;
+    font-weight: bold;
+    text-decoration: none; 
+}
+ul a:hover{
+    text-decoration: underline;
+}
+p{
+    color: #aaa;
+    font-size: .9rem;
+}
+
+@media (min-width: 800px) {
+    .container{
+        height: 50vh;
+    }
+    .icons-link a{
+        font-size: 2rem;    
+    }
+    .icons-link,
+    ul{
+        margin-bottom: 2em;
+    }
+    ul a{
+        font-size: 1rem;
+    }
+    p{
+        font-size: 1rem;
+    }
+}
